@@ -1,0 +1,191 @@
+
+/* Images */
+
+.img-container {
+   display: flex;
+}
+
+.img-container > img {
+   width: 100%;
+}
+
+
+
+/* Backgrounds */
+
+.bg-parallax {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+
+   backdrop-filter: blur(1rem);
+
+   background-color: rgba(0, 0, 0, 0.60);
+   background-blend-mode: color-dodge;
+}
+
+.bg-low {
+   color: var(--white);
+   background-color: var(--low);
+}
+
+.bg-base {
+   color: var(--low);
+   background-color: var(--base);
+}
+
+.bg-main {
+   color: var(--white);
+   background-color: var(--main);
+}
+
+.bg-highlight {
+   color: var(--base);
+   background-color: var(--highlight);
+}
+
+
+
+/* Text */
+
+.base-text {
+   color: var(--base);
+}
+
+.low-text {
+   color: var(--low);
+}
+
+.highlight-text {
+   color: var(--highlight);
+}
+
+.main-text {
+   color: var(--main);
+}
+
+.white-link {
+   color: var(--white);
+   text-decoration: none;
+
+   transition: color 0.3s ease-in-out;
+}
+
+.white-link:hover {
+   color: var(--highlight);
+}
+
+.main-link {
+   color: var(--highlight);
+   text-decoration: none;
+
+   transition: color 0.3s ease-in-out;
+}
+
+.main-link:hover {
+   color: var(--main);
+}
+
+.router-link {
+   color: var(--base);
+   background-color: var(--low);
+   text-decoration: none;
+
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.router-link:not(.active):hover {
+   color: var(--soft-black);
+   background-color: var(--highlight);
+}
+
+.router-link.active {
+   color: var(--low);
+   background-color: var(--main);
+   font-weight: bold;
+}
+
+
+
+/* Cursors */
+
+.cursor-pointer,
+.cursor-pointer::after,
+.cursor-pointer::before {
+   cursor: pointer!important;
+}
+
+
+
+/* Display */
+
+.main-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 3rem;
+   
+   grid-template-areas: "prof main main main"
+                        "attr main main main";
+}
+
+.grid-prof {
+   grid-area: prof;
+}
+
+.grid-attr {
+   grid-area: attr;
+}
+
+.grid-main {
+   grid-area: main;
+}
+
+.info-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: 1fr;
+   gap: 2rem;
+}
+
+
+
+/* Custom styles */
+
+.portfolio-element {
+   position: relative;
+}
+
+.portfolio-element > p {
+   transition: color 0.5s ease-in-out;
+}
+
+.portfolio-data {
+   position: absolute;
+   top: calc(100% + 0.2rem);
+   right: -0.2rem;
+   bottom: -0.2rem;
+   left: -0.2rem;
+
+   overflow: hidden;
+
+   background-color: rgba(7, 42, 64, 0.75);
+
+   transition: top 0.5s ease-in-out;
+}
+
+.portfolio-img {
+   transition: filter 0.5s ease-in-out;
+}
+
+.portfolio-element:hover > .portfolio-data {
+   top: -0.2rem;
+}
+
+.portfolio-element:hover > .portfolio-img {
+   filter: blur(0.2rem);
+}
+
+.portfolio-element:hover > p {
+   color: transparent;
+}

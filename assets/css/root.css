@@ -1,0 +1,16 @@
+:root {
+   /* Fonts */
+   --main-font: 'Roboto Flex', sans-serif;
+
+   /* Colors */
+   --white: #EAECEF;
+   
+   --base: #F9F7F0;
+   --main: #178CA4;
+   --highlight: #18B7BE;
+   --low: #072A40;
+   --bg: #213337;
+
+   --black: #0B0E11;
+   --soft-black: #181A20;
+}
